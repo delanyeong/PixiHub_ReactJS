@@ -4,7 +4,7 @@ import { img_300 } from '../../config/config'
 function SingleContent (props) {
   return (
     <div>
-        <img src={`${img_300}/${props.poster}`}></img>
+        <img src={`${img_300}/${props.poster}`} alt=""></img>
     </div>
   )
 }
