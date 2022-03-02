@@ -3,9 +3,9 @@ import "./Header.css"
 
 function Header () {
   return (
-    <div>
-        <span className="header">Pixihub</span>
-    </div>
+    <span onClick={() => window.scroll(0,0)} className="header">
+      PIXIHUB
+    </span>
   )
 }
 
