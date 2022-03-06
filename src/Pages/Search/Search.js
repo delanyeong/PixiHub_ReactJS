@@ -34,7 +34,7 @@ function Search () {
   useEffect (() => {
     window.scroll(0,0);
     fetchSearch();
-  },[])
+  })
   
   return (
     <div>
