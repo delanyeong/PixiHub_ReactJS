@@ -7,8 +7,13 @@ import SingleContent from '../../components/SingleContent/SingleContent';
 
 
 function Search () {
-  const [searchText, setSearchText] = useState("");
   const [content, setContent] = useState([])
+  const [searchText, setSearchText] = useState("");
+  const [searchFromButtonClick, setSearchFromButtonClick] = useState("")
+
+  const handleClick = () => {
+    setSearchFromButtonClick(searchText)
+  }
 
   const darkTheme = createTheme({
     palette: {
@@ -20,27 +25,24 @@ function Search () {
   })
 
   const fetchSearch = async() => {
-    try {
       const { data } = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=6dabcff495f51dd56007af237e249fbd&query=${searchText}`
+        `https://api.themoviedb.org/3/search/movie?api_key=6dabcff495f51dd56007af237e249fbd&query=${searchFromButtonClick}`
       );
       setContent(data.results);
-      // console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
   };
 
   useEffect (() => {
     window.scroll(0,0);
     fetchSearch();
-  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[searchFromButtonClick])
   
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
         <div style={{ dispaly: "flex", margin: "15px 0px" }}>
           <TextField
+            value = {searchText}
             style = {{ flex: 1 }}
             className="searchBox"
             label="Search"
@@ -48,25 +50,24 @@ function Search () {
             onChange={(e) => setSearchText(e.target.value)}
           />
           <Button
-          onClick={fetchSearch}
+          onClick={handleClick}
           variant="contained"
           style={{ marginLeft: 10 }}> <SearchIcon /> 
           </Button>
         </div>
       </ThemeProvider>
       <div className="trending">
-        {content && content.map((c) => (
-          <SingleContent
-            key={c.id}
-            id={c.id}
-            poster={c.poster_path}
-            title={c.title || c.name}
-            date={c.first_air_date || c.release_date}
-            media_type={c.media_type}
-            vote_average={c.vote_average}
-            />
-        ))}
-        {searchText && !content}
+        {
+          content && content.map((c) => <SingleContent
+          key={c.id}
+          id={c.id}
+          poster={c.poster_path}
+          title={c.title || c.name}
+          date={c.first_air_date || c.release_date}
+          media_type="movie"
+          vote_average={c.vote_average}
+          />
+          )}
       </div>
     </div>
   )
