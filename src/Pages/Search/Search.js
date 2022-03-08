@@ -1,7 +1,7 @@
 import { Button, createTheme, TextField, ThemeProvider } from '@material-ui/core'
 // import React, { useEffect } from 'react'
 import SearchIcon from "@material-ui/icons/Search"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import SingleContent from '../../components/SingleContent/SingleContent';
 
@@ -31,16 +31,6 @@ const Search = () => {
     console.error(error);
     }
   }
-
-  // useEffect(() => {
-  //   return () => {
-  //     setContent([]);
-  //     setSearchText("");
-  //   };
-  // },[]);
-
-  
-  
   
   return (
     <div>
