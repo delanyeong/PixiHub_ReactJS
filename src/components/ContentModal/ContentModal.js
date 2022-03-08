@@ -60,11 +60,6 @@ export default function ContentModal(props) {
       useEffect(() => {
           fetchData();
           fetchVideo();
-          // return () => {
-          // setOpen(false);
-          // setContent();
-          // setVideo();
-          // };
       // eslint-disable-next-line react-hooks/exhaustive-deps
       },[]);
 
