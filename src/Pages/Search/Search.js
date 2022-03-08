@@ -1,19 +1,14 @@
 import { Button, createTheme, TextField, ThemeProvider } from '@material-ui/core'
-import React, { useEffect } from 'react'
+// import React, { useEffect } from 'react'
 import SearchIcon from "@material-ui/icons/Search"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import SingleContent from '../../components/SingleContent/SingleContent';
 
 
-function Search () {
+const Search = () => {
   const [content, setContent] = useState([])
   const [searchText, setSearchText] = useState("");
-  const [searchFromButtonClick, setSearchFromButtonClick] = useState("")
-
-  const handleClick = () => {
-    setSearchFromButtonClick(searchText)
-  }
 
   const darkTheme = createTheme({
     palette: {
@@ -24,18 +19,28 @@ function Search () {
     }
   })
 
+
   const fetchSearch = async() => {
+    try {
       const { data } = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=6dabcff495f51dd56007af237e249fbd&query=${searchFromButtonClick}`
+        `https://api.themoviedb.org/3/search/movie?api_key=6dabcff495f51dd56007af237e249fbd&query=${searchText}`
       );
       setContent(data.results);
-  };
+      console.log(data.results);
+    } catch (error) {
+    console.error(error);
+    }
+  }
 
-  useEffect (() => {
-    window.scroll(0,0);
-    fetchSearch();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[searchFromButtonClick])
+  // useEffect(() => {
+  //   return () => {
+  //     setContent([]);
+  //     setSearchText("");
+  //   };
+  // },[]);
+
+  
+  
   
   return (
     <div>
@@ -50,7 +55,7 @@ function Search () {
             onChange={(e) => setSearchText(e.target.value)}
           />
           <Button
-          onClick={handleClick}
+          onClick={fetchSearch}
           variant="contained"
           style={{ marginLeft: 10 }}> <SearchIcon /> 
           </Button>
@@ -70,7 +75,7 @@ function Search () {
           )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

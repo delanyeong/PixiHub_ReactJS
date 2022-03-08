@@ -60,7 +60,12 @@ export default function ContentModal(props) {
       useEffect(() => {
           fetchData();
           fetchVideo();
-      });
+          // return () => {
+          // setOpen(false);
+          // setContent();
+          // setVideo();
+          // };
+      },[]);
 
   return (
     <div>
