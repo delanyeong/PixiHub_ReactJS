@@ -2,6 +2,8 @@ import axios from 'axios';
 import "./Trending.css"
 import React, { useEffect, useState } from 'react'
 import SingleContent from '../../components/SingleContent/SingleContent';
+import WhatshotIcon from '@material-ui/icons/Whatshot';
+
 
 const Trending = () => {
 
@@ -21,7 +23,7 @@ const Trending = () => {
 
   return (
     <div>
-        <span className="pageTitle">Trending</span>
+        <span className="pageTitle">{<WhatshotIcon />}Trending {<WhatshotIcon />}</span>
         <div className='trending'>
           {
             content && content.map((c) => <SingleContent 

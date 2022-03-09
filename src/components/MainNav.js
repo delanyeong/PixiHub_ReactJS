@@ -4,7 +4,7 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import SearchIcon from '@material-ui/icons/Search';
-import StarIcon from '@material-ui/icons/Star';
+import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import { useNavigate } from 'react-router-dom'
 
@@ -63,7 +63,7 @@ export default function SimpleBottomNavigation() {
         }}
         style={{color: "white"}}
         label="Favourites"
-        icon={<StarIcon />}
+        icon={<PlaylistAddIcon />}
     />
     <BottomNavigationAction
         onClick={() => {

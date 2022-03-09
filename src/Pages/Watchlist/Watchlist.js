@@ -6,7 +6,8 @@ function Watchlist () {
   const {watchlist} = useContext(GlobalContext);
   return (
     <div>
-        <span className="pageTitle">Watch List</span>
+      {watchlist.length > 0 ? (
+      <div>
         {watchlist && watchlist.map((c) => <SingleContent 
         key={c.id}
         id={c.id}
@@ -16,8 +17,11 @@ function Watchlist () {
         media_type="movie"
         vote_average={c.vote_average}
          /> )}
+      </div>
+      ) : (<h2>Your life is bleak, Human. <br></br>Go watch some movies.</h2>)
+        }
     </div>
   )
-}
+      }
 
-export default Watchlist
+export default Watchlist;
