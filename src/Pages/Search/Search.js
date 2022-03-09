@@ -27,9 +27,11 @@ const Search = () => {
       );
       setContent(data.results);
       console.log(data.results);
-    } catch (error) {
+    } 
+    catch (error) {
     console.error(error);
     }
+    window.scroll(0, 0);
   }
   
   return (
@@ -47,7 +49,8 @@ const Search = () => {
           <Button
           onClick={fetchSearch}
           variant="contained"
-          style={{ marginLeft: 10 }}> <SearchIcon /> 
+          style={{ marginLeft: 10 }}> \
+          <SearchIcon fontSize="large" /> 
           </Button>
         </div>
       </ThemeProvider>

@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
-import MovieIcon from '@material-ui/icons/Movie';
 import SearchIcon from '@material-ui/icons/Search';
-import TvIcon from '@material-ui/icons/Tv';
+import StarIcon from '@material-ui/icons/Star';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 import { useNavigate } from 'react-router-dom'
 
 const useStyles = makeStyles({
@@ -46,14 +46,6 @@ export default function SimpleBottomNavigation() {
           navigate("/");
         }}
         style={{color: "white"}}
-        label="Home"
-        icon={<MovieIcon />}
-    />
-    <BottomNavigationAction
-        onClick={() => {
-          navigate("/trending");
-        }}
-        style={{color: "white"}}
         label="Trending"
         icon={<WhatshotIcon />}
     />
@@ -67,11 +59,19 @@ export default function SimpleBottomNavigation() {
     />
     <BottomNavigationAction
         onClick={() => {
-          navigate("/series");
+          navigate("/watchlist");
         }}
         style={{color: "white"}}
-        label="TV Series"
-        icon={<TvIcon />}
+        label="Favourites"
+        icon={<StarIcon />}
+    />
+    <BottomNavigationAction
+        onClick={() => {
+          navigate("/watched");
+        }}
+        style={{color: "white"}}
+        label="Watched"
+        icon={<VisibilityIcon />}
     />
     
     </BottomNavigation>
