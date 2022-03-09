@@ -20,7 +20,7 @@ function Watched () {
         vote_average={c.vote_average}
          /> )}
       </div>
-      ) : (<h2>You disappoint me, Human.</h2>)
+      ) : (<h2>No movies in your list, add some!</h2>)
         }
     </div>
   )

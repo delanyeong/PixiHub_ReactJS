@@ -11,11 +11,15 @@ import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
 function SingleContent (props) {
-  const { addMovieToWatchlist, watchlist, removeMovieFromWatchlist, addMovieToWatched, removeFromWatched } = useContext(GlobalContext)
+  const { addMovieToWatchlist, watchlist, watched, removeMovieFromWatchlist, addMovieToWatched, removeFromWatched } = useContext(GlobalContext)
 
-  let storedMovie = watchlist.find(o => o.id === props.id );
+  let storedMovie = watchlist.find((o) => o.id === props.id );
 
-  const watchlistDisabled = storedMovie ? true : false;
+  let storedMovieWatched = watched.find((o) => o.id === props.id );
+
+  const watchlistDisabled = storedMovie ? true : storedMovieWatched ? true : false;
+
+  const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
     <ContentModal media_type={props.media_type} id={props.id}>
@@ -42,6 +46,7 @@ function SingleContent (props) {
       startIcon={<DeleteIcon />}>Favourites
       </Button>
       <Button 
+      disabled={watchedDisabled}
       onClick={() => addMovieToWatched(props)}
       variant="contained" 
       color="primary" 

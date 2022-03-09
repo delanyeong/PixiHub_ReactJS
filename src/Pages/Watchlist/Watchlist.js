@@ -18,7 +18,7 @@ function Watchlist () {
         vote_average={c.vote_average}
          /> )}
       </div>
-      ) : (<h2>Your life is bleak, Human. <br></br>Go watch some movies.</h2>)
+      ) : (<h2>No movies in your list, add some!</h2>)
         }
     </div>
   )

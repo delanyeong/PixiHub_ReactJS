@@ -4,7 +4,7 @@ import AppReducer from './AppReducer';
 //initial state
 const initialState = {
     watchlist: localStorage.getItem("watchlist") ? JSON.parse(localStorage.getItem("watchlist")) : [],
-    watched: localStorage.getItem("watched") ? JSON.parse(JSON.stringify(localStorage.getItem("watched"))) : []
+    watched: localStorage.getItem("watched") ? JSON.parse(localStorage.getItem("watched")) : []
 }
 
 //create context
