@@ -4,7 +4,6 @@ import { img_300, unavailable } from '../../config/config'
 import './SingleContent.css'
 import ContentModal from "../ContentModal/ContentModal"
 import { Button } from '@material-ui/core'
-import { mergeClasses } from '@material-ui/styles'
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import VisibilityIcon from '@material-ui/icons/Visibility';
@@ -33,49 +32,44 @@ function SingleContent (props) {
       </span>
 
       {storedMovie ? (
-        <Button 
+        <Button className="button"
           onClick={() => removeMovieFromWatchlist(props.id)}
           variant="contained" 
           color="secondary" 
-          className={mergeClasses.button} 
           startIcon={<DeleteIcon />}>Favourites
         </Button>
       ) : (storedMovieWatched) ? (
-        <Button 
+        <Button className="button"
           disabled={[]}
           onClick={() => removeMovieFromWatchlist(props.id)}
           variant="contained" 
           color="secondary" 
-          className={mergeClasses.button} 
           startIcon={<DeleteIcon />}>Favourites
         </Button>
         ) : (
-        <Button 
+        <Button className="button"
           // disabled={watchlistDisabled}
           onClick={() => addMovieToWatchlist(props)}
           variant="contained" 
           color="primary" 
-          className={mergeClasses.button} 
           startIcon={<AddIcon />}>Favourites
         </Button>
         )
       }
       
       {storedMovieWatched ? (
-        <Button 
+        <Button className="button"
           onClick={() => removeFromWatched(props.id)}
           variant="contained" 
           color="secondary" 
-          className={mergeClasses.button} 
           startIcon={<VisibilityOffIcon />}>
         </Button>
       ) : (
-        <Button 
+        <Button className="button"
           // disabled={watchedDisabled}
           onClick={() => addMovieToWatched(props)}
           variant="contained" 
           color="primary" 
-          className={mergeClasses.button} 
           startIcon={<VisibilityIcon />}>
         </Button>
       )
