@@ -4,7 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import axios from 'axios';
-import { img_500, unavailable } from '../../config/config';
+import { img_500, unavailable, unavailableLandscape } from '../../config/config';
 import { Badge, Button } from '@material-ui/core';
 import YouTubeIcon from "@material-ui/icons/YouTube"
 import "./ContentModal.css"
@@ -64,8 +64,8 @@ export default function ContentModal(props) {
       },[]);
 
   return (
-    <div>
-      <div className="media" >
+    <>
+      <div className="media" style={{ cursor: "pointer" }} color="inherit">
         <Badge onClick={handleOpen} badgeContent="i" color="primary"></Badge>
         {props.children} {/* children is a keyword */}
       </div>
@@ -88,12 +88,13 @@ export default function ContentModal(props) {
             <div className='ContentModal'>
               <img 
               src={`${content.poster_path}` ? `${img_500}/${content.poster_path}`: `${unavailable}`} 
+              className="ContentModal__portrait"
               alt={content.name || content.title}/>
               
-              {/* <img
+              <img
               src={`${content.backdrop_path}` ? `${img_500}/${content.backdrop_path}` : `${unavailableLandscape}`} 
               alt={content.name || content.title} 
-              className= "ContentModal_landscape" /> */}
+              className= "ContentModal__landscape" />
 
               <div
                 className="ContentModal__about">
@@ -129,6 +130,6 @@ export default function ContentModal(props) {
         )}
         </Fade>
       </Modal>
-    </div>
+    </>
   );
 }

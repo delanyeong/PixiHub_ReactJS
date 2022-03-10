@@ -4,6 +4,7 @@ import SearchIcon from "@material-ui/icons/Search"
 import { useState } from 'react';
 import axios from 'axios';
 import SingleContent from '../../components/SingleContent/SingleContent';
+import "./Search.css";
 
 
 const Search = () => {
@@ -37,7 +38,7 @@ const Search = () => {
   return (
     <div>
       <ThemeProvider theme={darkTheme}>
-        <div style={{ dispaly: "flex", margin: "15px 0px" }}>
+        <div className="search">
           <TextField
             value = {searchText}
             style = {{ flex: 1 }}

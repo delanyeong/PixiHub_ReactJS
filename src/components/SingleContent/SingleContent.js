@@ -10,6 +10,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
+
 function SingleContent (props) {
   const { addMovieToWatchlist, watchlist, watched, removeMovieFromWatchlist, addMovieToWatched, removeFromWatched } = useContext(GlobalContext)
 
@@ -24,7 +25,7 @@ function SingleContent (props) {
   return (
     <ContentModal media_type={props.media_type} id={props.id}>
       <img className="poster" 
-      src={ `${props.poster}` ?`${img_300}/${props.poster}` : `${unavailable}` }  alt={props.title} />
+      src={ `${props.poster}` ? `${img_300}${props.poster}` : `${unavailable}` }  alt={props.title} />
       <b className="title">{props.title}</b>
       <span className="subTitle">
         {`${props.media_type}` === "tv" ? "TV Series" : "Movie"}
