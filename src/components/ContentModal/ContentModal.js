@@ -86,7 +86,7 @@ export default function ContentModal(props) {
           <div className={classes.paper}>
             
             <div className='ContentModal'>
-              <Badge onClick={handleClose} badgeContent="X" color="secondary" size="large"></Badge>
+              <Badge onClick={handleClose} badgeContent="X" color="secondary"></Badge>
               <img 
               src={`${content.poster_path}` ? `${img_500}/${content.poster_path}`: `${unavailable}`} 
               className="ContentModal__portrait"
