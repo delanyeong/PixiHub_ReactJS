@@ -35,15 +35,16 @@ function SingleContent (props) {
         <Button 
           onClick={() => removeMovieFromWatchlist(props.id)}
           variant="contained" 
-          color="primary" 
+          color="secondary" 
           className={mergeClasses.button} 
           startIcon={<DeleteIcon />}>Favourites
         </Button>
       ) : (storedMovieWatched) ? (
         <Button 
+          disabled={[]}
           onClick={() => removeMovieFromWatchlist(props.id)}
           variant="contained" 
-          color="primary" 
+          color="secondary" 
           className={mergeClasses.button} 
           startIcon={<DeleteIcon />}>Favourites
         </Button>
@@ -58,12 +59,12 @@ function SingleContent (props) {
         </Button>
         )
       }
-
+      
       {storedMovieWatched ? (
         <Button 
           onClick={() => removeFromWatched(props.id)}
           variant="contained" 
-          color="primary" 
+          color="secondary" 
           className={mergeClasses.button} 
           startIcon={<VisibilityOffIcon />}>
         </Button>
