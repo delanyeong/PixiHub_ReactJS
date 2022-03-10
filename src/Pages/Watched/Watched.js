@@ -9,7 +9,7 @@ function Watched () {
   return (
     <div>
       {watched.length > 0 ? (
-      <div>
+      <div className="trending">
         {watched && watched.map((c) => <SingleContent 
         key={c.id}
         id={c.id}

@@ -7,7 +7,7 @@ function Watchlist () {
   return (
     <div>
       {watchlist.length > 0 ? (
-      <div>
+      <div className="trending">
         {watchlist && watchlist.map((c) => <SingleContent 
         key={c.id}
         id={c.id}
