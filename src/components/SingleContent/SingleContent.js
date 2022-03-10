@@ -17,9 +17,9 @@ function SingleContent (props) {
 
   let storedMovieWatched = watched.find((o) => o.id === props.id );
 
-  const watchlistDisabled = storedMovie ? true : storedMovieWatched ? true : false;
+  // const watchlistDisabled = storedMovie ? true : storedMovieWatched ? true : false;
 
-  const watchedDisabled = storedMovieWatched ? true : false;
+  // const watchedDisabled = storedMovieWatched ? true : false;
 
   return (
     <ContentModal media_type={props.media_type} id={props.id}>
@@ -30,7 +30,75 @@ function SingleContent (props) {
         {`${props.media_type}` === "tv" ? "TV Series" : "Movie"}
       <span className="subTitle">{props.date}</span>
       </span>
-      <Button 
+
+      {storedMovie ? (
+        <Button 
+          onClick={() => removeMovieFromWatchlist(props.id)}
+          variant="contained" 
+          color="primary" 
+          className={mergeClasses.button} 
+          startIcon={<DeleteIcon />}>Favourites
+        </Button>
+      ) : (storedMovieWatched) ? (
+        <Button 
+          onClick={() => removeMovieFromWatchlist(props.id)}
+          variant="contained" 
+          color="primary" 
+          className={mergeClasses.button} 
+          startIcon={<DeleteIcon />}>Favourites
+        </Button>
+        ) : (
+        <Button 
+          // disabled={watchlistDisabled}
+          onClick={() => addMovieToWatchlist(props)}
+          variant="contained" 
+          color="primary" 
+          className={mergeClasses.button} 
+          startIcon={<AddIcon />}>Favourites
+        </Button>
+        )
+      }
+
+      {storedMovieWatched ? (
+        <Button 
+          onClick={() => removeFromWatched(props.id)}
+          variant="contained" 
+          color="primary" 
+          className={mergeClasses.button} 
+          startIcon={<VisibilityOffIcon />}>
+        </Button>
+      ) : (
+        <Button 
+          // disabled={watchedDisabled}
+          onClick={() => addMovieToWatched(props)}
+          variant="contained" 
+          color="primary" 
+          className={mergeClasses.button} 
+          startIcon={<VisibilityIcon />}>
+        </Button>
+      )
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {/* <Button 
       disabled={watchlistDisabled}
       onClick={() => addMovieToWatchlist(props)}
       variant="contained" 
@@ -59,7 +127,7 @@ function SingleContent (props) {
       color="primary" 
       className={mergeClasses.button} 
       startIcon={<VisibilityOffIcon />}>
-      </Button>
+      </Button> */}
     </ContentModal>
   )
 }
