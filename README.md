@@ -19,14 +19,14 @@ The Favourites and Watched pages help keep track of the user's media content jou
 ![CHEESE!](readmeimages/watched.PNG)
 
 ## Technologies used
-React.js
-Javascript
-Material UI v4
-CSS
-HTML
-YouTube
+React.js <br />
+Javascript <br />
+Material UI v4 <br />
+CSS <br />
+HTML <br />
+YouTube <br />
 
 ## References
-https://www.youtube.com/watch?v=vxUfx4aM5d8&t=1583s
+https://www.youtube.com/watch?v=vxUfx4aM5d8&t=1583s <br />
 https://www.youtube.com/watch?v=1eO_hNYzaSc&t=3359s
 
