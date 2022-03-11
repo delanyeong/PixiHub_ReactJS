@@ -22,7 +22,7 @@ Its interactive movie card enables the user to add movies to Favourites as a rem
 ![CHEESE!](readmeimages/favwatchedbutton.PNG)
 
 ## Modal Pop-Up Window
-It displays the movie's summary and a dedicated button to the watch its trailer via YouTube link. To return to the original page, simply click on the "X" at the corner of the window or anywhere outside it to close it.
+The window displays the movie's summary and a dedicated button to the watch its trailer via YouTube link. To return to the original page, simply click on the "X" at the corner of the window or anywhere outside it to close it.
 
 ![CHEESE!](readmeimages/modal.PNG)
 
