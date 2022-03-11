@@ -1,6 +1,6 @@
 # PixiHub
 
-PixiHub is a Movie app that can be used as a personal movie watchlist tracker for the all the user's favourite films and tv series. 
+PixiHub is a Movie app that can be used as a personal movielist tracker for the all the user's favourite films and tv series. 
 
 It mimics the UI of exisiting popular entertainment apps such as Netflix, Disney+, to allow the user to have an overview of different movie titles at a glance. 
 
