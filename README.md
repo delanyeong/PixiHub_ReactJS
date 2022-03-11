@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# PixiHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+PixiHub is a Movie app that can be used as a personal movie watchlist tracker for the all the user's favourite films and tv series. 
 
-## Available Scripts
+It mimics the UI of exisiting popular entertainment apps such as Netflix, Disney+, to allow the user to have an overview of different movie titles at a glance. 
 
-In the project directory, you can run:
+Upon entering the app, the user is immediately greeted by the Trending page, which displays the top newest movies that just premiered.
+![!CHEESE!] (readmeimages/trending.PNG)
 
-### `npm start`
+Users are also able to search their favourite movies, using the search function at the app's search page. It displays the top matches. 
+![!CHEESE!] (readmeimages/search.PNG)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Its interactive movie card enables the user to add chosen movies to favourites as a reminder to watch later, or add to watched if seen before. Clicking on the "i" at the corner of the card, blows it up into a modal window, displaying the movie summary to learn more about it, and a dedicated button to the watch its trailer via YouTube link. To return to the main page, simply just click on the "X" at the corner of the window or anywhere outside it to close the window.
+![!CHEESE!] (readmeimages/favwatchedbutton.PNG)
+![!CHEESE!] (readmeimages/modal.PNG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Favourites and Watched pages help keep track of the user's media content journey. Once movies are saved in one of these pages, any other page of the app that you access will be marked accordingly as well. So you never have to fret over bookmarking the same movies again! It can be used as a watchlist "binge reminder" ahead of a busy schedule, and a way to show off your movie count or how much of a Star Wars geek you are to your friends.   
+![!CHEESE!] (readmeimages/watchlist.PNG)
+![!CHEESE!] (readmeimages/watched.PNG)
 
-### `npm test`
+## Technologies used
+React.js
+Javascript
+Material UI v4
+CSS
+HTML
+YouTube
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## References
+https://www.youtube.com/watch?v=vxUfx4aM5d8&t=1583s
+https://www.youtube.com/watch?v=1eO_hNYzaSc&t=3359s
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
