@@ -18,11 +18,12 @@ Users are also able to search for specific movies, using the search function at 
 
 ## Movie Card
 Its interactive movie card enables the user to add movies to Favourites as a reminder to watch later, or add it to Watched if seen before. Clicking on the "i" at the corner of the card, blows it up into a modal window. 
-<br />
-
-It displays the movie's summary and a dedicated button to the watch its trailer via YouTube link. To return to the original page, simply click on the "X" at the corner of the window or anywhere outside it to close it.
 
 ![CHEESE!](readmeimages/favwatchedbutton.PNG)
+
+## Modal Pop-Up Window
+It displays the movie's summary and a dedicated button to the watch its trailer via YouTube link. To return to the original page, simply click on the "X" at the corner of the window or anywhere outside it to close it.
+
 ![CHEESE!](readmeimages/modal.PNG)
 
 ## Favourites and Watched Page
