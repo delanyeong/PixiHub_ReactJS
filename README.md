@@ -42,6 +42,7 @@ Material UI v4 <br />
 CSS <br />
 HTML <br />
 YouTube <br />
+Movie API : TMDB API - https://www.themoviedb.org/documentation/api
 
 ## References
 https://www.youtube.com/watch?v=vxUfx4aM5d8&t=1583s <br />
