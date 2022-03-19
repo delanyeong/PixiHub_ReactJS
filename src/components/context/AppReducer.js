@@ -28,6 +28,12 @@ export default (state, action) => {
                     (props) => props.id !== action.payload
                     )
             }
+        case "CLEAR":
+            return {
+                ...state,
+                watched: [],
+                watchlist: []
+            }
         default:
             return state;
     }
