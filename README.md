@@ -1,5 +1,7 @@
-# PixiHub
+# Unit 2 Project : ReactJS App
+General Assembly Software Engineering Immersive Bootcamp
 
+# PixiHub
 PixiHub is a Movie app that can be used as a personal Movie List tracker for the all the user's favourite films and tv series. 
 
 It mimics the UI of exisiting popular entertainment apps such as Netflix, Disney+, etc. to allow the user to have an overview of different movie titles at a glance. 
